@@ -24,6 +24,9 @@ gem "devise-i18n"
 # ユーザーのトークン認証を提供する
 gem "devise_token_auth"
 
+# ページネーション機能を提供する
+gem "kaminari"
+
 # pumaサーバーを使えるようにする（標準gem）
 gem "puma", "~> 5.0"
 
@@ -40,6 +43,8 @@ gem "rails-i18n"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
+  # N+1発生時にアラートを表示する
+  gem "bullet"
   # 開発環境でメール送信をテストする
   gem "letter_opener_web"
   # pry コンソールを使えるようにする。
